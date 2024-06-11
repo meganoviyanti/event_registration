@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Event Registration') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    Event Registration
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -32,6 +32,16 @@
                     <ul class="navbar-nav me-auto">
 
                     </ul>
+                     <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav ml-auto">
+                    <!-- Tambahkan link About Us dan Contact di sini -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/about') }}">{{ __('About Us') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/contact') }}">{{ __('Contact') }}</a>
+                    </li>
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
@@ -48,6 +58,9 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+
+                            
+
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
