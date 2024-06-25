@@ -21,21 +21,26 @@
                         font-family: sans-serif;
                         margin: 0;
                         padding: 0;
-                        background-color: #f4f4f4;
+                        background-color: #8fe3f85a;
+                        /* background-image: url('https://wallpaperaccess.com/full/5234615.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center; */
                     }
 
                     .container {
                         display: flex;
-                        padding: 20px;
-                        gap: 30px;
+                        padding: 0px;
+                        gap: 40px;
                     }
 
                     .event-info {
-                        width: 30%;
+                        width: 40%;
                     }
 
                     .event-image {
-                        width: 70%;
+                        width: 100%;
+                        height: 20%;
                     }
 
                     .event-image img {
@@ -183,12 +188,14 @@
                      height: 2px;
                      top: 2px
                     } 
+
+                    
                 </style>
             </head>
             <body>
                 <div class="container">
                     <div class="event-image">
-                        <img src="{{ asset('https://scontent-xsp1-1.xx.fbcdn.net/v/t39.30808-6/448158352_389757510768937_528856765891646536_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGgzMTXEf2NraDsNt-PvHL8NsCV9E77rIw2wJX0TvusjPqf3YWwS1y7UdY6_Y5cRkMrGR7VgBSYaMiVOS-viriU&_nc_ohc=WUuY6v8RokMQ7kNvgEFpOtF&_nc_ht=scontent-xsp1-1.xx&oh=00_AYD8MP-WbOWMFEyOCUp6ms_kfgi0O-NX4qGoM8aAGYjJQA&oe=667242AE') }}" class="img-fluid" alt="Flowercity Fest">
+                        <img src="{{ asset('https://scontent-cgk1-1.xx.fbcdn.net/v/t39.30808-6/448158352_389757510768937_528856765891646536_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGgzMTXEf2NraDsNt-PvHL8NsCV9E77rIw2wJX0TvusjPqf3YWwS1y7UdY6_Y5cRkMrGR7VgBSYaMiVOS-viriU&_nc_ohc=lSOgmFWZhXsQ7kNvgHgAisE&_nc_ht=scontent-cgk1-1.xx&oh=00_AYDcHGzCU7LZe8s_leC5u4fqOwQVNuttWvRJPNXaIcsxzw&oe=667EC8EE') }}" class="img-fluid" alt="Flowercity Fest">
                     </div>
                     <div class="event-info">
                         <div class="event-details">
@@ -207,75 +214,54 @@
                             </div>
                         </div>
                         <div class="event-actions">
-                            <button>Beli Tiket</button>
+                            <a class="nav-link" href="{{ route('registration.create') }}">
+                                <button>Beli Tiket</button>
+                            </a>
                         </div>
-                        <div class="event-footer">
-                            <div class="event-organizer">
-                                <img src="{{ asset('https://scontent-xsp1-1.xx.fbcdn.net/v/t39.30808-6/448158352_389757510768937_528856765891646536_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGgzMTXEf2NraDsNt-PvHL8NsCV9E77rIw2wJX0TvusjPqf3YWwS1y7UdY6_Y5cRkMrGR7VgBSYaMiVOS-viriU&_nc_ohc=WUuY6v8RokMQ7kNvgEFpOtF&_nc_ht=scontent-xsp1-1.xx&oh=00_AYD8MP-WbOWMFEyOCUp6ms_kfgi0O-NX4qGoM8aAGYjJQA&oe=667242AE') }}" class="img-fluid" alt="Flowercity Fest">
-                                <p>LiveWire Festival</p>
-                            </div>
-                        </div>
+                        
                         <div class="event-footer">
                             <div class="event-actions">
-                                <button class="disabled" id="btn-deskripsi" onclick="showContent('deskripsi')"><i class="fas fa-calendar-alt"></i> Deskripsi</button>
-                                <button class="disabled" id="btn-tiket" onclick="showContent('tiket')"><i class="fas fa-ticket-alt"></i> Tiket</button>
-                                <button class="disabled" id="btn-talent" onclick="showContent('talent')"><i class="fas fa-user-friends"></i> Talent</button>
-                                <button class="disabled" id="btn-fasilitas" onclick="showContent('fasilitas')"><i class="fas fa-chair"></i> Fasilitas</button>
+                                <img src="{{ asset('https://s.mxmcdn.net/images-storage/albums5/3/4/8/6/3/2/65236843_500_500.jpg') }}"style="width:95px; height:95px; margin: 5px;">
+                                <img src="{{ asset('https://www.ngepop.id/upload/media/entries/2023-07/21/463-entry-3-1689942619.jpg') }}"style="width:95px; height:95px; margin: 5px;">
+                                <img src="{{ asset('https://lh3.googleusercontent.com/dca67HvZTqlOuKgfPkADCZ4SYDdwm4B-TfWzYIvBLhF7ycFsHcqGmeMYJ3v6n0emRBsga1If93iiFWs=w544-h544-l90-rj') }}"style="width:95px; height:95px; margin: 5px;">
+                                <img src="{{ asset('https://mosaic.scdn.co/640/ab67616d0000b2734b685f036496bb88ee961c3cab67616d0000b2736b221b782a6aa8159d2886aeab67616d0000b27388dbfe85024acb12162c0e52ab67616d0000b273a8ed5e88294cb292a9cc7baa') }}"style="width:95px; height:95px; margin: 5px;">
+                                <img src="{{ asset('https://th.bing.com/th/id/OIP.WPecAfIZ6IgCcug0xYFyywAAAA?rs=1&pid=ImgDetMain') }}"style="width:95px; height:95px; margin: 5px;">
                             </div>
                         </div>
+                        </div>
                     </div>
-                </div>
                 <!-- Include Font Awesome Script -->
                 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
             </body>
             </html>
-            <div id="deskripsi" style="display: none;">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Deskripsi Event</h5>
-                        <p class="card-text">Ini adalah deskripsi event, tulis informasi menarik tentang event anda di sini.</p>
-                    </div>
-                </div>
-            </div>
-            <div id="tiket" style="display: none;">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Informasi Tiket</h5>
-                        <p class="card-text">Ini adalah informasi tiket, tulis informasi harga, kategori, dan pembelian tiket di sini.</p>
-                    </div>
-                </div>
-            </div>
-            <div id="talent" style="display: none;">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Daftar Talent</h5>
-                        <p class="card-text">Ini adalah daftar talent yang akan tampil, tulis informasi lengkap tentang mereka di sini.</p>
-                    </div>
-                </div>
-            </div>
-            <div id="fasilitas" style="display: none;">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Fasilitas</h5>
-                        <p class="card-text">Ini adalah daftar fasilitas yang tersedia di event, tulis informasi lengkap tentangnya di sini.</p>
-                    </div>
-                </div>
-            </div>
-            <script>
-                function showContent(id) {
-                    let content = document.getElementById(id);
-                    content.style.display = 'block';
-                    let buttons = document.getElementsByClassName('disabled');
-                    for (let i = 0; i < buttons.length; i++) {
-                        if (buttons[i].id !== 'btn-' + id) {
-                            buttons[i].classList.add('disabled');
-                            buttons[i].onclick = null;
-                        } else {
-                            buttons[i].classList.remove('disabled');
-                        }
-                    }
-                }
-            </script>
+        </header>
+    
+        <main>
+            <section class="card mt-5 p-4 shadow-lg rounded" style="background-color: #2a9cbf">
+                <h2>Deskripsi Event</h2>
+                <p>Livewire Konser Festival adalah sebuah event musik live yang menghadirkan berbagai musisi ternama dari berbagai genre. Festival ini akan diadakan pada waktu dan tempat yang telah ditentukan diatas. Livewire Konser Festival adalah kesempatan perfect untuk kamu yang ingin menikmati musik live bersama teman-teman dan keluarga. Festival ini akan menghadirkan berbagai hiburan, seperti:</p>
+                <ul>
+                    <li>Penampilan musik live dari musisi ternama</li>
+                    <li>Food and beverage stalls</li>
+                    <li>Merchandise stalls</li>
+                    <li>Games and activities</li>
+                    <li>Dan masih banyak lagi!</li>
+                </ul>
+            </section>
+    
+            <section class="card mt-5 p-4 shadow-lg rounded" style="background-color: #2a9cbf">
+                <h2>Pemesanan Tiket</h2>
+                <p>Tiket Livewire Konser Festival sudah tersedia sekarang! Dapatkan tiketmu di **[Link pembelian tiket]**. Harga tiket:</p>
+                <ul>
+                    <li>PAYUN - PRESALE 1: Rp [150.000]</li>
+                    <li>PAYUN - PRESALE 2: Rp [175.000]</li>
+                    <li>PAYUN - EARLY BIRD : Rp [125.000]</li>
+                    <li>PENGKER - PRESALE 1: Rp [75.000]</li>
+                    <li>PENGKER - PRESALE 2: Rp [100.000]</li>
+                </ul>
+                <p>Jangan sampai ketinggalan! Pesan tiket Livewire Konser Festival sekarang juga!</p>
+            </section>
+        </main>
         </div>
     </div>
 </div>

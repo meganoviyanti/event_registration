@@ -38,23 +38,23 @@
 
         <div class="row justify-content-center">
             <div class="col-md-2 text-center">
-                <img src="{{ asset('https://scontent-sin6-1.xx.fbcdn.net/v/t39.30808-6/378118786_215376908206999_9021053465256297304_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEp6E1vLuVjOKRkOPn2PM_IHbNt7L6MQAkds23svoxACd9sNJuhD4Cu4K__6aqaAgdqDLwd-qGt4659qNS3EJmA&_nc_ohc=Bm4krXt5n9cQ7kNvgENjKU_&_nc_ht=scontent-sin6-1.xx&oh=00_AYBxLBltcWrN6xMhIWKPDWMinE0DVJF70jfE1V_nvEa0XA&oe=666E0158') }}" class="img-fluid rounded-circle" alt="Mega" style="width: 150px; height: 150px;">
+                <img src="{{ asset('https://scontent-cgk1-1.xx.fbcdn.net/v/t39.30808-6/378118786_215376908206999_9021053465256297304_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEp6E1vLuVjOKRkOPn2PM_IHbNt7L6MQAkds23svoxACd9sNJuhD4Cu4K__6aqaAgdqDLwd-qGt4659qNS3EJmA&_nc_ohc=yztqTzFxEcwQ7kNvgHD12zw&_nc_ht=scontent-cgk1-1.xx&oh=00_AYDqxq9_bluO8hj5yOp4hWLn_wMa-7AlJghZYYKzF9WgDw&oe=667EB458') }}" class="img-fluid rounded-circle" alt="Mega" style="width: 150px; height: 150px;">
                 <h4 class="mt-2">Mega <br> Nopiyanti</h4>
             </div>
             <div class="col-md-2 text-center">
-                <img src="{{ asset('https://scontent-sin6-2.xx.fbcdn.net/v/t39.30808-6/448088983_387767930967895_3167959565098602180_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHRsUCbq3-L3oh301Plcg3NbHKPSs9EE6dsco9Kz0QTp8Xf6He7T54Ch6gr2cZ-3Z_ohGLdgjc_dPWCPqLf5EK_&_nc_ohc=-cL9u_286uAQ7kNvgHzUYlq&_nc_ht=scontent-sin6-2.xx&oh=00_AYA1NxWL8pB4XZioqp_D-Dq4dnUQx04Uaa4UcvL_C5Id3Q&oe=666E19A2') }}" class="img-fluid rounded-circle" alt="Kintan" style="width: 150px; height: 150px;">
+                <img src="{{ asset('https://scontent-cgk1-1.xx.fbcdn.net/v/t39.30808-6/448088983_387767930967895_3167959565098602180_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHRsUCbq3-L3oh301Plcg3NbHKPSs9EE6dsco9Kz0QTp8Xf6He7T54Ch6gr2cZ-3Z_ohGLdgjc_dPWCPqLf5EK_&_nc_ohc=URE3hVNP4zQQ7kNvgEnm7s6&_nc_ht=scontent-cgk1-1.xx&oh=00_AYAPcM4Aff58XhYduH9KUQCSZQxerKs4ka629FBGP8iKIw&oe=667ECCA2') }}" class="img-fluid rounded-circle" alt="Kintan" style="width: 150px; height: 150px;">
                 <h4 class="mt-2">Kintan <br> Mutiara L</h4>
             </div>
             <div class="col-md-2 text-center">
-                <img src="{{ asset('https://scontent-cgk1-1.xx.fbcdn.net/v/t39.30808-6/448252568_389454984132523_6436258827321965701_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEZAcFHtcATBs7kT3INiDCfv9fbIwfUN--_19sjB9Q37_uL7ohs7US_u501vhGod6mwaAYFm1vtgOSCNTG_2Lm5&_nc_ohc=vftD0EOZ7PwQ7kNvgGdQz_O&_nc_ht=scontent-cgk1-1.xx&oh=00_AYDXAMyAxvRJ4L_I6vfDPj88ubryBc-zK6fmCfl3Si3icw&oe=6671A109') }}" class="img-fluid rounded-circle" alt="Hendra" style="width: 150px; height: 150px;">
+                <img src="{{ asset('https://scontent-cgk1-1.xx.fbcdn.net/v/t39.30808-6/448252568_389454984132523_6436258827321965701_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEZAcFHtcATBs7kT3INiDCfv9fbIwfUN--_19sjB9Q37_uL7ohs7US_u501vhGod6mwaAYFm1vtgOSCNTG_2Lm5&_nc_ohc=oVbyktK_CsQQ7kNvgE9RxRR&_nc_ht=scontent-cgk1-1.xx&oh=00_AYBClsbnuWGzc6Ya8TpBjwDmADG0fvoY9mcWVlXWQrYSnw&oe=667ED009') }}" class="img-fluid rounded-circle" alt="Hendra" style="width: 150px; height: 150px;">
                 <h4 class="mt-2">Hendra <br> Sopian</h4> 
             </div>
             <div class="col-md-2 text-center">
-                <img src="{{ asset('https://scontent-xsp1-1.xx.fbcdn.net/v/t39.30808-6/448249480_388829207528434_2086134669336791652_n.jpg?stp=dst-jpg_p526x296&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFM2KxzadzLQ4HCIPvPziVDW4SWs28aBT9bhJazbxoFP_g-K1n2vE6PSYdQZtWcXGmHS9vzTGmMzBQoaiD124DA&_nc_ohc=K8FDWz-O7xcQ7kNvgGvlW-W&_nc_ht=scontent-xsp1-1.xx&oh=00_AYC9_S9VOqUB2NAfOoKdHD3R-mNqtFXmp_vfsE6YeJgdQg&oe=667045D8') }}" class="img-fluid rounded-circle" alt="Aryanti" style="width: 150px; height: 150px;">
+                <img src="{{ asset('https://scontent-cgk1-1.xx.fbcdn.net/v/t39.30808-6/448249480_388829207528434_2086134669336791652_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFM2KxzadzLQ4HCIPvPziVDW4SWs28aBT9bhJazbxoFP_g-K1n2vE6PSYdQZtWcXGmHS9vzTGmMzBQoaiD124DA&_nc_ohc=ITWgJMSSa-wQ7kNvgGI-cJ7&_nc_ht=scontent-cgk1-1.xx&oh=00_AYB3tPS4dlTybUgcTadNvOnD5y71heobTPwimRXvH6MYhw&oe=667EC658') }}" class="img-fluid rounded-circle" alt="Aryanti" style="width: 150px; height: 150px;">
                 <h4 class="mt-2">Aryanti</h4>
             </div>
             <div class="col-md-2 text-center">
-                <img src="{{ asset('https://scontent-cgk1-1.xx.fbcdn.net/v/t39.30808-6/448106241_388831000861588_7694285451109038078_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGcl1jq6mU-xnPyJrH_cWtR6hPCrhgiWvTqE8KuGCJa9Ma8V-J0ICns8EbL3rSKHThGBu0_GRYvVxrr_tiI3N3I&_nc_ohc=vDIyD-wN9UAQ7kNvgF8qklV&_nc_ht=scontent-cgk1-1.xx&oh=00_AYAnESpspDsi6P4leSQP5vWvRekirUKEunFOSTxzgNS-Jw&oe=66706036') }}" class="img-fluid rounded-circle" alt="Riska" style="width: 150px; height: 150px;">
+                <img src="{{ asset('https://scontent-cgk1-1.xx.fbcdn.net/v/t39.30808-6/448106241_388831000861588_7694285451109038078_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGcl1jq6mU-xnPyJrH_cWtR6hPCrhgiWvTqE8KuGCJa9Ma8V-J0ICns8EbL3rSKHThGBu0_GRYvVxrr_tiI3N3I&_nc_ohc=GAuZyDuo9WsQ7kNvgHd-l52&_nc_ht=scontent-cgk1-1.xx&oh=00_AYD7t9WFa_4vxSJ-HxBrNsCxNDU5qdGCbF1RPx-ky6lPYw&oe=667EE0B6') }}" class="img-fluid rounded-circle" alt="Riska" style="width: 150px; height: 150px;">
                 <h4 class="mt-2">Riska <br> Mulyani</h4>
             </div>
         </div>

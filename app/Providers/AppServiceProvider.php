@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Blade;
+use App\View\Components\LinkButton;
+use App\View\Components\Invalid;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +22,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Blade::component('link-button', LinkButton::class);
+        Blade::component('invalid', Invalid::class);
     }
 }
+
+
+
+
+

@@ -59,9 +59,19 @@
                                 </li>
                             @endif
 
+                            @if (Route::has('home'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
+                                </li>
+                            @endif
+                            
                             
 
                         @else
+                        <li class="nav-item"></li>
+                        <a class="nav-link" href="{{ route ('tiket.index') }}">Tiket</a>
+                        </li>
+                        
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
