@@ -36,18 +36,18 @@ class TiketController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'nama_tiket' => 'required|string',
+            'nama_pembeli' => 'required|string',
             'kategori_tiket' => 'required|string',
             'jumlah' => 'required|integer',
-            'kapasitas' => 'required|string',
+            'tanggal' => 'required|string',
         ]);
 
         // Simpan data ke dalam database
         $tiket = new Tiket();
-        $tiket->nama_tiket = $request->nama_tiket;
+        $tiket->nama_pembeli = $request->nama_pembeli;
         $tiket->kategori_tiket = $request->kategori_tiket;
         $tiket->jumlah = $request->jumlah;
-        $tiket->kapasitas = $request->kapasitas;
+        $tiket->tanggal = $request->tanggal;
         $tiket->save();
 
         // Redirect atau response sesuai kebutuhan aplikasi
@@ -79,10 +79,10 @@ class TiketController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'nama_tiket' => 'required|string|max:100',
+            'nama_pembeli' => 'required|string|max:100',
             'kategori_tiket' => 'required|string',
             'jumlah' => 'required|integer',
-            'kapasitas' => 'required|string',
+            'tanggal' => 'required|string',
         ]);
 
         $tiket = Tiket::findOrFail($id);

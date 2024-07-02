@@ -10,9 +10,9 @@ class tiket extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama_tiket',
+        'nama_pembeli',
         'kategori_tiket',
         'jumlah',
-        'kapasitas',
+        'tanggal',
     ];
 }

@@ -195,7 +195,7 @@
             <body>
                 <div class="container">
                     <div class="event-image">
-                        <img src="{{ asset('https://scontent-cgk1-1.xx.fbcdn.net/v/t39.30808-6/448158352_389757510768937_528856765891646536_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGgzMTXEf2NraDsNt-PvHL8NsCV9E77rIw2wJX0TvusjPqf3YWwS1y7UdY6_Y5cRkMrGR7VgBSYaMiVOS-viriU&_nc_ohc=lSOgmFWZhXsQ7kNvgHgAisE&_nc_ht=scontent-cgk1-1.xx&oh=00_AYDcHGzCU7LZe8s_leC5u4fqOwQVNuttWvRJPNXaIcsxzw&oe=667EC8EE') }}" class="img-fluid" alt="Flowercity Fest">
+                        <img src="{{ url('images\foto\livewire.jpg') }}" class="img-fluid" alt="Flowercity Fest">
                     </div>
                     <div class="event-info">
                         <div class="event-details">
@@ -214,8 +214,8 @@
                             </div>
                         </div>
                         <div class="event-actions">
-                            <a class="nav-link" href="{{ route('registration.create') }}">
-                                <button>Beli Tiket</button>
+                            <a class="nav-link" href="{{ route('daftar.tampilan') }}">
+                                <button>Info lebih lanjut</button>
                             </a>
                         </div>
                         
@@ -237,7 +237,7 @@
         </header>
     
         <main>
-            <section class="card mt-5 p-4 shadow-lg rounded" style="background-color: #2a9cbf">
+            <section class="card mt-5 p-4 shadow-lg rounded" style="background-color: 	#E6E6FA">
                 <h2>Deskripsi Event</h2>
                 <p>Livewire Konser Festival adalah sebuah event musik live yang menghadirkan berbagai musisi ternama dari berbagai genre. Festival ini akan diadakan pada waktu dan tempat yang telah ditentukan diatas. Livewire Konser Festival adalah kesempatan perfect untuk kamu yang ingin menikmati musik live bersama teman-teman dan keluarga. Festival ini akan menghadirkan berbagai hiburan, seperti:</p>
                 <ul>
@@ -249,9 +249,9 @@
                 </ul>
             </section>
     
-            <section class="card mt-5 p-4 shadow-lg rounded" style="background-color: #2a9cbf">
+            <section class="card mt-5 p-4 shadow-lg rounded" style="background-color: 	#E6E6FA">
                 <h2>Pemesanan Tiket</h2>
-                <p>Tiket Livewire Konser Festival sudah tersedia sekarang! Dapatkan tiketmu di **[Link pembelian tiket]**. Harga tiket:</p>
+                <p>Tiket Livewire Konser Festival sudah tersedia sekarang! Dapatkan tiketmu di <a href="{{ route('daftar.tampilan') }}">sini</a>. Harga tiket:</p>
                 <ul>
                     <li>PAYUN - PRESALE 1: Rp [150.000]</li>
                     <li>PAYUN - PRESALE 2: Rp [175.000]</li>

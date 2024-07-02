@@ -2,7 +2,6 @@
 
 @section('content')
 <style>
-  /* Style untuk form */
   .body {
     background-color: #8fe3f85a;
   }
@@ -16,13 +15,11 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
 
-  /* Style untuk label */
   label {
     font-weight: bold;
     color: #333;
   }
 
-  /* Style untuk input dan select */
   input[type=text],
   select {
     width: 100%;
@@ -34,7 +31,7 @@
     box-sizing: border-box;
   }
 
-  /* Style untuk tombol submit */
+
   button[type=submit] {
     background-color: #4CAF50;
     color: white;
@@ -45,15 +42,14 @@
     float: right;
   }
 
-  /* Style untuk tombol submit saat dihover */
+ 
   button[type=submit]:hover {
     background-color: #45a049;
   }
 
-  /* Style untuk container tombol */
   .button-container {
-    text-align: right; /* Mengatur posisi tombol ke kanan */
-    margin-top: 10px; /* Jarak antara form dan tombol */
+    text-align: right; 
+    margin-top: 10px; 
   }
 </style>
 
@@ -61,8 +57,8 @@
   <form action="{{ route('tiket.store') }}" method="post">
     @csrf
     <div class="form-group">
-        <label for="nama_tiket">Nama tiket</label>
-        <input type="text" class="form-control" id="nama_tiket" name="nama_tiket" value="{{ old('nama_tiket') }}">
+        <label for="nama_pembeli">Nama Pembeli</label>
+        <input type="text" class="form-control" id="nama_pembeli" name="nama_pembeli" value="{{ old('nama_pembeli') }}">
     </div>
     <div class="form-group">
       <label for="kategori_tiket">Kategori Tiket</label>
@@ -85,15 +81,8 @@
       </select>
     </div>
     <div class="form-group">
-        <label for="kapasitas">Kapasitas</label>
-        <select class="form-control" id="kapasitas" name="kapasitas">
-          <option value="">Pilih Kapasitas untuk Tiket</option>
-          <option value="PAYUN - PRESALE 1 [200]">PAYUN - PRESALE 1 [200]</option>
-          <option value="PAYUN - PRESALE 2 [300]">PAYUN - PRESALE 2 [300]</option>
-          <option value="PAYUN - EARLY BIRD [400]">PAYUN - EARLY BIRD [400]</option>
-          <option value="PAYUN - PRESALE 1 [500]">PAYUN - PRESALE 1 [500]</option>
-          <option value="PAYUN - PRESALE 2 [600]">PAYUN - PRESALE 2 [600]</option>
-        </select>
+        <label for="tanggal">Tanggal</label>
+        <input type="text" class="form-control" id="tanggal" name="tanggal" value="{{ old('tanggal') }}">
     </div>
     <div class="button-container">
       <button type="submit" class="btn btn-primary">Submit</button>

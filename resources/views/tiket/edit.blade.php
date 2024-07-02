@@ -59,8 +59,8 @@
     @csrf
     @method('PUT')
     <div class="form-group">
-        <label for="nama_tiket">Nama tiket</label>
-        <input type="text" class="form-control" id="nama_tiket" name="nama_tiket" value="{{ $tiket->nama_tiket }}">
+        <label for="nama_pembeli">Nama Pembeli</label>
+        <input type="text" class="form-control" id="nama_pembeli" name="nama_pembeli" value="{{ $tiket->nama_pembeli }}">
     </div>
     <div class="form-group">
       <label for="kategori_tiket">Kategori Tiket</label>
@@ -83,16 +83,9 @@
       </select>
     </div>
     <div class="form-group">
-        <label for="kapasitas">Kapasitas</label>
-        <select class="form-control" id="kapasitas" name="kapasitas">
-          <option value="">Pilih Kapasitas untuk Tiket</option>
-          <option {{ $tiket->kapasitas == 'PAYUN - PRESALE 1 [200]' ? 'selected' : '' }}>PAYUN - PRESALE 1 [200]</option>
-          <option {{ $tiket->kapasitas == 'PAYUN - PRESALE 2 [300]' ? 'selected' : '' }}>PAYUN - PRESALE 2 [300]</option>
-          <option {{ $tiket->kapasitas == 'PAYUN - EARLY BIRD [400]' ? 'selected' : '' }}>PAYUN - EARLY BIRD [400]</option>
-          <option {{ $tiket->kapasitas == 'PAYUN - PRESALE 1 [500]' ? 'selected' : '' }}>PAYUN - PRESALE 1 [500]</option>
-          <option {{ $tiket->kapasitas == 'PAYUN - PRESALE 2 [600]' ? 'selected' : '' }}>PAYUN - PRESALE 2 [600]</option>
-        </select>
-    </div>
+      <label for="tanggal">Tanggal</label>
+      <input type="text" class="form-control" id="tanggal" name="tanggal" value="{{ old('tanggal') }}">
+  </div>
     <div class="button-container">
       <button type="submit" class="btn btn-primary">Update</button>
     </div>

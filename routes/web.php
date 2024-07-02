@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TiketController;
-use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\DaftarController;
+use App\Models\Register;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -31,30 +32,6 @@ Route::get('/tiket', function () {
     return view('tiket');
 })->name('tiket');
 
-// Route untuk menyimpan data registrasi (gunakan URL dan nama rute yang unik)
-Route::post('/register/simple', function () {
-    // Logic untuk menyimpan data pendaftaran bisa ditambahkan di sini
-    return redirect()->back()->with('message', 'Registration successful!');
-})->name('register.simple');
-
-// Route untuk form registrasi
-Route::get('/register', [RegistrationController::class, 'create'])->name('registration.create');
-
-// Debugging untuk memastikan rute terdaftar
-Route::get('/debug', function () {
-    return response()->json([
-        'registration_create_exists' => Route::has('registration.create')
-    ]);
-});
-
-// Route untuk menyimpan data registrasi melalui controller
-Route::post('/register', [RegistrationController::class, 'store'])->name('registration.store');
-
-// Route lainnya terkait registrasi
-Route::get('/register/success', [RegistrationController::class, 'success'])->name('registration.success');
-Route::get('/transaction', [RegistrationController::class, 'transaction'])->name('transaction.show');
-Route::post('/transaction', [RegistrationController::class, 'processTransaction'])->name('transaction.process');
-
 // Route untuk tiket
 Route::get('/tikets', [TiketController::class, 'index'])->name('tikets.index');
 Route::post('/tikets', [TiketController::class, 'store'])->name('tikets.store');
@@ -75,34 +52,21 @@ Route::post('/logout', function () {
     return redirect('/');
 })->name('logout');
 
+Route::get('/daftar', [DaftarController::class, 'index']);
+Route::get('/daftar', [DaftarController::class, 'index'])->name('daftar.index');
+Route::get('/daftar/create', [DaftarController::class, 'create'])->name('daftar.create');
+Route::get('/daftar/tampilan', [DaftarController::class, 'tampilan'])->name('daftar.tampilan');
+Route::post('/daftar/store', [DaftarController::class, 'store'])->name('daftar.store');
+Route::resource('daftar', DaftarController::class);
+
+Route::get('/masuk', [UserController::class, 'index']);
+Route::get('/masuk', [UserController::class, 'index'])->name('masuk.index');
+Route::get('/register', [UserController::class, 'register'])->name('masuk.register');
+
+Route::get('masuk/index', function () {
+    return view('masuk.index');
+});
 
 
-Route::get('/register', [RegistrationController::class, 'create'])->name('registration.create');
-Route::post('/register', [RegistrationController::class, 'store'])->name('registration.store');
-Route::get('/transaction', [RegistrationController::class, 'transaction'])->name('transaction.show');
-Route::post('/transaction', [RegistrationController::class, 'processTransaction'])->name('transaction.process');
-Route::get('/register/success', [RegistrationController::class, 'success'])->name('registration.success');
 
-Route::get('/register', [RegistrationController::class, 'create'])->name('registration.create');
-Route::post('/register', [RegistrationController::class, 'store'])->name('registration.store');
-Route::get('/transaction', [RegistrationController::class, 'transaction'])->name('registration.transaction'); // Pastikan rute ini sudah didefinisikan
-Route::post('/transaction', [RegistrationController::class, 'processTransaction'])->name('transaction.process');
-Route::get('/register/success', [RegistrationController::class, 'success'])->name('registration.success');
 
-//pendaftaran
-Route::get('/pendaftaran', [RegistrationController::class, 'index'])->name('registration.index');
-Route::post('/pendaftaran', [RegistrationController::class, 'store'])->name('registration.store');
-Route::get('/pendaftaran', [RegistrationController::class, 'index'])->name('registration.index');
-Route::get('/pendaftaran/transaction', function () {
-    return view('transaction');
-})->name('registration.transaction');
-
-Route::resource('registration', RegistrationController::class);
-
-Route::get('/registration', [RegistrationController::class, 'index'])->name('registration.index');
-Route::get('/registration/create', [RegistrationController::class, 'create'])->name('registration.create');
-Route::post('/registration/store', [RegistrationController::class, 'store'])->name('registration.store');
-Route::get('/registration/{id}/edit', [RegistrationController::class, 'edit'])->name('registration.edit');
-
-Route::put('/registration/{id}/update', [RegistrationController::class, 'update'])->name('registration.update');
-Route::delete('/registration/{pendaftaran}/delete', [RegistrationController::class, 'destroy'])->name('registration.destroy');

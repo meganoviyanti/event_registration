@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('tikets', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama_tiket', 100);
+            $table->string('nama_pembeli', 100);
             $table->string('kategori_tiket');
             $table->integer('jumlah');
-            $table->string('kapasitas');
+            $table->string('tanggal');
             $table->timestamps();
           });
           
