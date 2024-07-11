@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Tiket;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TiketController extends Controller
 {
@@ -19,10 +20,11 @@ class TiketController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('tiket.create');
-        
+        $tiket_id = $request->query('tiket_id');
+        $tiket = Tiket::find($tiket_id);
+        return view('transaksi.create', compact('tiket'));
     }
 
     public function registrasi()
@@ -35,14 +37,7 @@ class TiketController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'nama_pembeli' => 'required|string',
-            'kategori_tiket' => 'required|string',
-            'jumlah' => 'required|integer',
-            'tanggal' => 'required|string',
-        ]);
-
-        // Simpan data ke dalam database
+        // Validasi dan simpan tiket
         $tiket = new Tiket();
         $tiket->nama_pembeli = $request->nama_pembeli;
         $tiket->kategori_tiket = $request->kategori_tiket;
@@ -50,8 +45,8 @@ class TiketController extends Controller
         $tiket->tanggal = $request->tanggal;
         $tiket->save();
 
-        // Redirect atau response sesuai kebutuhan aplikasi
-        return redirect()->route('tikets.index')->with('success', 'Tiket berhasil disimpan.');
+        // Redirect ke form transaksi dengan membawa data tiket
+        return redirect()->route('transaksi.create', ['tiket_id' => $tiket->id]);
     }
 
     /**
@@ -70,7 +65,6 @@ class TiketController extends Controller
     {
         $tiket = Tiket::findOrFail($id);
         return view('tiket.edit', compact('tiket'));
-
     }
 
     /**
@@ -86,10 +80,15 @@ class TiketController extends Controller
         ]);
 
         $tiket = Tiket::findOrFail($id);
-        $tiket->update($request->all());
+        $tiket->update([
+            'nama_pembeli' => $request->nama_pembeli,
+            'kategori_tiket' => $request->kategori_tiket,
+            'jumlah' => $request->jumlah,
+            'tanggal' => $request->tanggal,
+        ]);
 
         return redirect()->route('tiket.index')->with('success', 'Tiket berhasil diupdate.');
- }
+    }
 
     /**
      * Remove the specified resource from storage.
@@ -98,7 +97,6 @@ class TiketController extends Controller
     {
         $tiket = Tiket::findOrFail($id);
         $tiket->delete();
-        return redirect()->route('tiket.index');
-
+        return redirect()->route('tiket.index')->with('success', 'Tiket berhasil dihapus.');
     }
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\DaftarController;
 use App\Models\Register;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TransaksiController;
 
 // Route default untuk halaman utama
 Route::get('/', function () {
@@ -68,5 +69,9 @@ Route::get('masuk/index', function () {
 });
 
 
+Route::get('/transaksi/create', [TransaksiController::class, 'create'])->name('transaksi.create');
+Route::post('/transaksi', [TransaksiController::class, 'store'])->name('transaksi.store');
+Route::get('/transaksi/index', [TransaksiController::class, 'index'])->name('transaksi.index');
 
 
+Route::get('/beli-tiket/{id}', [TiketController::class, 'beliTiket'])->name('beli.tiket');
