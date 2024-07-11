@@ -20,7 +20,7 @@ class TiketSeeder extends Seeder
         foreach (range(1, 25) as $index) {
             tiket::create([
                 'nama_pembeli' => $faker->name,
-                'kategori_tiket' => $faker->randomElement(['PAYUN - PRESALE 1', 'PAYUN - PRESALE 2', 'PAYUN - EARLY BIRD', 'PENGKER - PRESALE 1', 'PENGKER - PRESALE 2']),
+                'kategori_tiket' => $faker->randomElement(['PAYUN - PRESALE 1', 'PAYUN - EARLY BIRD', 'PENGKER - PRESALE 1']),
                 'jumlah' => $faker->numberBetween(1, 3),
                'tanggal' => $faker->dateTimeBetween('2024-01-01', '2024-08-03'),
             ]);

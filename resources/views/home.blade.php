@@ -202,7 +202,7 @@
                             <h3>Detail Event</h3>
                             <div class="detail-item">
                                 <i class='far fa-calendar-alt'></i>
-                                <p>04 Aug 2024</p>
+                                <p>20 Juni 2024</p>
                             </div>
                             <div class="detail-item">
                                 <i class='far fa-clock'></i>
@@ -215,7 +215,7 @@
                         </div>
                         <div class="event-actions">
                             <a class="nav-link" href="{{ route('daftar.tampilan') }}">
-                                <button>Info lebih lanjut</button>
+                                <button>Pertunjukan & Acara</button>
                             </a>
                         </div>
                         
@@ -254,10 +254,8 @@
                 <p>Tiket Livewire Konser Festival sudah tersedia sekarang! Dapatkan tiketmu di <a href="{{ route('daftar.tampilan') }}">sini</a>. Harga tiket:</p>
                 <ul>
                     <li>PAYUN - PRESALE 1: Rp [150.000]</li>
-                    <li>PAYUN - PRESALE 2: Rp [175.000]</li>
                     <li>PAYUN - EARLY BIRD : Rp [125.000]</li>
                     <li>PENGKER - PRESALE 1: Rp [75.000]</li>
-                    <li>PENGKER - PRESALE 2: Rp [100.000]</li>
                 </ul>
                 <p>Jangan sampai ketinggalan! Pesan tiket Livewire Konser Festival sekarang juga!</p>
             </section>

@@ -59,6 +59,10 @@
 </style>
 
 <div class="container mx-auto py-3">
+    <div class="card-header bg-primary text-white">
+        Untuk Pembelian Tiket Silahkan Klik Tambah Tiket. <br>
+        Dan Untuk Pembayaran Dilakukan Setelah Mengisi Form Tambah Tiket.
+    </div>
     <div class="flex flex-col border shadow-sm rounded-md p-10">
         <div class="card-body">
             <a href="{{ route('tiket.create') }}" class="btn btn-danger btn-sm">Tambah Tiket</a>
@@ -95,6 +99,11 @@
                 @endforeach
             </tbody>
         </table>
+    </div>
+    <div class="text-end mt-3">
+        <form action="{{ route('transaksi.create') }}" method="get">
+            <button type="submit" class="btn btn-primary">Pembayaran</button>
+        </form>
     </div>
 </div>
 @endsection

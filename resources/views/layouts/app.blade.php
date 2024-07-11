@@ -42,8 +42,11 @@
                         <a class="nav-link" href="{{ url('/contact') }}">{{ __('Contact') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/home') }}">{{ __('Home') }}</a>
+                        <a class="nav-link" href="{{ url('/register') }}">{{ __('Register') }}</a>
                     </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="{{ route ('tiket.index') }}">Tiket</a>
+                        </li>
 
 
                     <!-- Right Side Of Navbar -->
@@ -62,19 +65,15 @@
                                 </li>
                             @endif
 
-                            @if (Route::has('home'))
+                            {{-- @if (Route::has('home'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
                                 </li>
-                            @endif
+                            @endif --}}
                             
                             
 
-                        @else
-                        <li class="nav-item"></li>
-                        <a class="nav-link" href="{{ route ('tiket.index') }}">Tiket</a>
-                        </li>
-                        
+                            @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

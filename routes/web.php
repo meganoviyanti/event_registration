@@ -3,6 +3,7 @@
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TiketController;
 use App\Http\Controllers\DaftarController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Models\Register;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +28,8 @@ Route::get('/contact', function () {
 Route::get('/home', function () {
     return view('home');
 })->name('home');
+
+
 
 // Route untuk halaman tiket
 Route::get('/tiket', function () {
@@ -53,6 +56,9 @@ Route::post('/logout', function () {
     return redirect('/');
 })->name('logout');
 
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
 Route::get('/daftar', [DaftarController::class, 'index']);
 Route::get('/daftar', [DaftarController::class, 'index'])->name('daftar.index');
 Route::get('/daftar/create', [DaftarController::class, 'create'])->name('daftar.create');
@@ -67,6 +73,17 @@ Route::get('/register', [UserController::class, 'register'])->name('masuk.regist
 Route::get('masuk/index', function () {
     return view('masuk.index');
 });
+
+
+Route::get('blog', function () {
+    return view('index/blog');
+});
+
+Route::get('/index/blog', function () {
+    return view('index.blog');
+})->middleware('auth');
+
+
 
 
 Route::get('/transaksi/create', [TransaksiController::class, 'create'])->name('transaksi.create');

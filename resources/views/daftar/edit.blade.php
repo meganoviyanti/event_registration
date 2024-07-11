@@ -26,7 +26,7 @@
                     <input type="text" class="form-control" name="nomor" value="{{ $daftar->nomor }}" required>
                 </div>
                 <div class="modal-footer">
-                    <a href="{{ route('daftar.index') }}" class="btn btn-danger" >Kembali</a>
+                    <a href="{{ route('daftar.index') }}" class="btn btn-danger me-3">Kembali</a>
                     <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
                 </div>
             </form>

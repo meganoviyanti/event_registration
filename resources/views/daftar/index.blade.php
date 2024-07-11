@@ -8,12 +8,12 @@
   </head>
   <body>
     <div class="container">
-        <div class="mt-3">
+        {{-- <div class="mt-3">
             <h1 class="text-center">Tabel Pendaftaran</h1>
-        </div>
+        </div> --}}
         <div class="card mt-3">
             <div class="card-header bg-primary text-white">
-                Daftar yang telah melakukan pendaftaran
+                Silahkan Lakukan Pendaftaran Sebelum Membeli Tiket, Klik Tambah Data Untuk Pendaftaran.
             </div>
             <div class="card-body">
                 <!-- Button trigger modal -->
@@ -84,6 +84,11 @@
                 </div>
                 <!-- akhir Modal -->
             </div>
+        </div>
+        <div class="text-end mt-3">
+            <form action="{{ route('tiket.index') }}" method="get">
+                <button type="submit" class="btn btn-primary">Beli Tiket Sekarang</button>
+            </form>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
