@@ -99,4 +99,5 @@ class TiketController extends Controller
         $tiket->delete();
         return redirect()->route('tiket.index')->with('success', 'Tiket berhasil dihapus.');
     }
+    
 }
