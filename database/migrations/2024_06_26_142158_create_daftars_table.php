@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->string('email');
-            $table->varchar('nomor');
+            $table->string('nomor');
             $table->timestamps();
         });
     }

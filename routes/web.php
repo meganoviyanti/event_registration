@@ -4,10 +4,10 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\TiketController;
 use App\Http\Controllers\DaftarController;
 use App\Http\Controllers\Auth\LoginController;
-use App\Models\Register;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\ReviewController;
 
 // Route default untuk halaman utama
 Route::get('/', function () {
@@ -28,8 +28,6 @@ Route::get('/contact', function () {
 Route::get('/home', function () {
     return view('home');
 })->name('home');
-
-
 
 // Route untuk halaman tiket
 Route::get('/tiket', function () {
@@ -56,39 +54,39 @@ Route::post('/logout', function () {
     return redirect('/');
 })->name('logout');
 
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
-Route::post('logout', [LoginController::class, 'logout'])->name('logout');
-
-Route::get('/daftar', [DaftarController::class, 'index']);
+// Route untuk Daftar
 Route::get('/daftar', [DaftarController::class, 'index'])->name('daftar.index');
 Route::get('/daftar/create', [DaftarController::class, 'create'])->name('daftar.create');
 Route::get('/daftar/tampilan', [DaftarController::class, 'tampilan'])->name('daftar.tampilan');
 Route::post('/daftar/store', [DaftarController::class, 'store'])->name('daftar.store');
 Route::resource('daftar', DaftarController::class);
 
-Route::get('/masuk', [UserController::class, 'index']);
+// Route untuk halaman login dan register
 Route::get('/masuk', [UserController::class, 'index'])->name('masuk.index');
 Route::get('/register', [UserController::class, 'register'])->name('masuk.register');
 
-Route::get('masuk/index', function () {
-    return view('masuk.index');
-});
-
-
+// Route untuk blog
 Route::get('blog', function () {
     return view('index/blog');
 });
-
 Route::get('/index/blog', function () {
     return view('index.blog');
 })->middleware('auth');
 
-
-
-
+// Route untuk transaksi
 Route::get('/transaksi/create', [TransaksiController::class, 'create'])->name('transaksi.create');
 Route::post('/transaksi', [TransaksiController::class, 'store'])->name('transaksi.store');
 Route::get('/transaksi/index', [TransaksiController::class, 'index'])->name('transaksi.index');
 
-
+// Route untuk membeli tiket
 Route::get('/beli-tiket/{id}', [TiketController::class, 'beliTiket'])->name('beli.tiket');
+
+// Route untuk reviews
+Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.index');
+Route::get('/reviews/create', [ReviewController::class, 'create'])->name('reviews.create');
+Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+Route::get('/reviews/{review}', [ReviewController::class, 'show'])->name('reviews.show');
+Route::get('/reviews/{review}/edit', [ReviewController::class, 'edit'])->name('reviews.edit');
+Route::patch('/reviews/{review}', [ReviewController::class, 'update'])->name('reviews.update');
+Route::delete('/reviews/{review}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
+
