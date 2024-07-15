@@ -3,6 +3,7 @@
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TiketController;
 use App\Http\Controllers\DaftarController;
+use App\Http\Controllers\VenueController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Models\Register;
 use Illuminate\Support\Facades\Auth;
@@ -92,3 +93,15 @@ Route::get('/transaksi/index', [TransaksiController::class, 'index'])->name('tra
 
 
 Route::get('/beli-tiket/{id}', [TiketController::class, 'beliTiket'])->name('beli.tiket');
+
+
+Route::resource('venues', VenueController::class);
+Route::get('/venues/index', [TransaksiController::class, 'index'])->name('venues.index');
+
+Route::resource('venues', VenueController::class);
+
+Route::get('/seating', function () {
+    return view('seating');
+});
+
+Route::get('/venues/{id}/seating', [VenueController::class, 'seating'])->name('venues.seating');
