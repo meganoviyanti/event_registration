@@ -206,7 +206,7 @@
     </form>
 
     <footer>
-        Terima kasih telah menikmati festival musik kami! Kami berharap Anda memiliki pengalaman yang luar biasa. Kami ingin mendengar pendapat Anda tentang band favorit Anda. Berikan rating dari 1 sampai 100 dan ulasan Anda, dan masukkan Event ID dari acara band tersebut. Event ID bisa Anda temukan di jadwal acara atau di dibawah barcode tiket Anda.
+        Terima kasih telah menikmati festival musik kami! Kami berharap Anda memiliki pengalaman yang luar biasa. Kami ingin mendengar pendapat Anda tentang band favorit Anda. Berikan rating dari 1 sampai 5 dan ulasan Anda, dan masukkan Event ID dari acara band tersebut. Event ID bisa Anda temukan di jadwal acara atau di dibawah barcode tiket Anda.
     </footer>
 
     <script>
