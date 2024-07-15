@@ -68,12 +68,9 @@ Route::get('masuk/index', function () {
     return view('masuk.index');
 });
 
+Route::get('/generate-pdf', [TiketController::class, 'generatePDF'])->name('generate-pdf');
+Route::get('/download-pdf', [PdfController::class, 'generatePdf'])->name('download-pdf');
 Route::get('/myPDF', function () {
     return view('myPDF');
 })->name('myPDF');
 
-// routes/web.php
-Route::get('myPDF', [PDFController::class, 'generatePDF']);
-Route::get('myPDF', [PDFController::class, 'downloadPDF'])->name('download.pdf');
-
-Route::get('/export-pdf', [PDFController::class, 'exportPdf'])->name('exportPdf');
