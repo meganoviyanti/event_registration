@@ -3,13 +3,10 @@
 use App\Http\Controllers\PdfController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TiketController;
-use App\Http\Controllers\VenueController;
 use App\Http\Controllers\DaftarController;
-use App\Http\Controllers\Auth\LoginController;
+use App\Models\Register;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TransaksiController;
-use App\Http\Controllers\ReviewController;
 
 // Route default untuk halaman utama
 Route::get('/', function () {
@@ -56,14 +53,14 @@ Route::post('/logout', function () {
     return redirect('/');
 })->name('logout');
 
-// Route untuk Daftar
+Route::get('/daftar', [DaftarController::class, 'index']);
 Route::get('/daftar', [DaftarController::class, 'index'])->name('daftar.index');
 Route::get('/daftar/create', [DaftarController::class, 'create'])->name('daftar.create');
 Route::get('/daftar/tampilan', [DaftarController::class, 'tampilan'])->name('daftar.tampilan');
 Route::post('/daftar/store', [DaftarController::class, 'store'])->name('daftar.store');
 Route::resource('daftar', DaftarController::class);
 
-// Route untuk halaman login dan register
+Route::get('/masuk', [UserController::class, 'index']);
 Route::get('/masuk', [UserController::class, 'index'])->name('masuk.index');
 Route::get('/register', [UserController::class, 'register'])->name('masuk.register');
 
@@ -71,6 +68,9 @@ Route::get('masuk/index', function () {
     return view('masuk.index');
 });
 
-
-
+Route::get('/generate-pdf', [TiketController::class, 'generatePDF'])->name('generate-pdf');
+Route::get('/download-pdf', [PdfController::class, 'generatePdf'])->name('download-pdf');
+Route::get('/myPDF', function () {
+    return view('myPDF');
+})->name('myPDF');
 
