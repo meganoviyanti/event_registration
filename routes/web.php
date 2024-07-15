@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TiketController;
+use App\Http\Controllers\VenueController;
 use App\Http\Controllers\DaftarController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Auth;
@@ -90,4 +91,4 @@ Route::get('/reviews/{review}/edit', [ReviewController::class, 'edit'])->name('r
 Route::patch('/reviews/{review}', [ReviewController::class, 'update'])->name('reviews.update');
 Route::delete('/reviews/{review}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
 
-
+Route::get('/venues', [VenueController::class, 'index'])->name('venues.index');

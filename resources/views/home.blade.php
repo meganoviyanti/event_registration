@@ -218,6 +218,11 @@
                                 <button>Pertunjukan & Acara</button>
                             </a>
                         </div>
+                        <div class="event-actions">
+                            <a class="nav-link" href="{{ route('venues.index') }}">
+                                <button>Venues Location</button>
+                            </a>
+                        </div>
                         
                         <div class="event-footer">
                             <div class="event-actions">
